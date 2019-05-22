@@ -1,0 +1,48 @@
+<mdb-card>
+    <mdb-card-body class="px-lg-5 pt-0">
+
+        <form *ngIf="form" [formGroup]="form" style="color: #757575;" (submit)="onSubmit($event)">
+            <div class="card" style="margin:50px 0">
+                <div class="alert alert-success" role="alert" *ngIf="successMes">
+                    {{successMes}}
+                </div>
+                <div class="card-header font-weight-bold">Alert Preferences <i class="fa fa-cog"></i></div>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        Receive Alerts by email
+                        <label class="switchToggle float-right">
+                            <input type="checkbox" id="alertByEmail"  formControlName="alertByEmail" mdbInputDirective data-success=" " data-error=" ">
+                            <label for="alertByEmail">Toggle</label>
+                        </label>
+                        <div class="md-form w-50">
+                            <input type="text" id="alertEmail" class="form-control"   mdbInputDirective formControlName="alertEmail" data-error="Please enter email" data-success=" ">
+                            <label for="alertEmail" class="font-small"><i class="fa fa-envelope"></i> email</label>
+                            <mdb-error *ngIf="errMes.alertEmail">{{errMes.alertEmail}}</mdb-error>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Receive Alerts by text messages
+                        <label class="switchToggle float-right">
+                            <input type="checkbox" id="alertByMobile" formControlName="alertByMobile" mdbInputDirective data-success=" " data-error=" ">
+                            <label for="alertByMobile">Toggle</label>
+                        </label>
+                        <div class="md-form w-50">
+                            <input type="text" id="alertMobile" class="form-control"   mdbInputDirective formControlName="alertMobile" data-error="Please enter mobile number" data-success=" ">
+                            <label for="alertMobile" class="font-small"><i class="fa fa-mobile-phone"></i> mobile</label>
+                            <mdb-error *ngIf="errMes.alertMobile">{{errMes.alertMobile}}</mdb-error>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Receive push notifications
+                        <label class="switchToggle float-right">
+                            <input type="checkbox" id="pushNotifications" formControlName="pushNotifications" mdbInputDirective data-success=" " data-error=" ">
+                            <label for="pushNotifications">Toggle</label>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn btn-facebook float-right" type="submit">UPDATE <i class="fa fa-edit"></i></button>
+        </form>
+    </mdb-card-body>
+</mdb-card>

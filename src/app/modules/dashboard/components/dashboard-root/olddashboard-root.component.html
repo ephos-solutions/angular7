@@ -1,0 +1,115 @@
+<main>
+    <div class="container">
+        <!--Section: Main info-->
+        <section class="mt-5 wow fadeIn">
+            <div class="row"></div>
+        </section>
+    </div>
+</main>
+
+<main>
+    <div class="container">
+        <!--Section: Main info-->
+        <section class="mt-5 wow fadeIn">
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Profile</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Alert Preference</a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Notifications</a>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+                    <!--&lt;!&ndash; Main heading &ndash;&gt;-->
+                    <!--<h3 class="h3 mb-3">Cavelog</h3>-->
+                    <!--<p>Read details below to.</p>-->
+                    <!--&lt;!&ndash; Main heading &ndash;&gt;-->
+
+                    <!--<hr>-->
+                    <mdb-card>
+
+                        <!--Card content-->
+                        <mdb-card-body class="px-lg-5 pt-0">
+                            <!-- Form -->
+                            <form *ngIf="form" [formGroup]="form" class="text-center" style="color: #757575;" (submit)="onSubmit($event)">
+                                <div class="md-form w-50 pr-5">
+                                    <input type="email" id="materialRegisterFormEmail" class="form-control" formControlName="username" mdbInputDirective data-error="Please enter username" data-success=" ">
+                                    <label for="materialRegisterFormEmail" >User name</label>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="md-form w-50 pr-5">
+                                    <input type="text" id="materialLoginFormEmail" class="form-control" formControlName="firstname" mdbInputDirective data-error="Please enter first name" data-success=" ">
+                                    <label for="materialLoginFormEmail">First Name</label>
+                                </div>
+
+                                <!-- Password -->
+                                <div class="md-form">
+                                    <input type="text" id="materialLoginFormPassword" class="form-control"   mdbInputDirective formControlName="lastname" data-error="Please enter last name" data-success=" ">
+                                    <label for="materialLoginFormPassword">Last Name</label>
+                                </div>
+
+                                <div class="md-form">
+                                    <input type="text" id="materialRegisterFormPhone" class="form-control" formControlName="telephone"  aria-describedby="materialRegisterFormPhoneHelpBlock"
+                                           mdbInputDirective data-error="Please enter  phone number" data-success=" ">
+                                    <label for="materialRegisterFormPhone">Phone number</label>
+                                </div>
+
+                                <div class="md-form">
+                                    <input type="text" id="materialRegisterFormaddrline1" class="form-control" formControlName="addrline1"  aria-describedby="materialRegisterFormPhoneHelpBlock"
+                                           mdbInputDirective data-error="Please enter  addrline1" data-success=" ">
+                                    <label for="materialRegisterFormPhone">addrline1</label>
+                                </div>
+
+                                <div class="md-form">
+                                    <input type="text" id="materialRegisterFormaddrline2" class="form-control" formControlName="addrline2"  aria-describedby="materialRegisterFormPhoneHelpBlock"
+                                           mdbInputDirective data-error="Please enter addrline2" data-success=" ">
+                                    <label for="materialRegisterFormPhone">addrline2</label>
+                                </div>
+
+                                <div class="md-form">
+                                    <input type="text" id="materialRegisterFormcity" class="form-control" formControlName="city"  aria-describedby="materialRegisterFormPhoneHelpBlock"
+                                           mdbInputDirective data-error="Please enter city" data-success=" ">
+                                    <label for="materialRegisterFormPhone">City</label>
+                                </div>
+
+                                <div class="md-form">
+                                    <input type="text" id="materialRegisterFormzipcode" class="form-control" formControlName="zipcode"  aria-describedby="materialRegisterFormPhoneHelpBlock"
+                                           mdbInputDirective data-error="Please enter zipcode" data-success=" ">
+                                    <label for="materialRegisterFormPhone">Zipcode</label>
+                                </div>
+
+                                <div class="md-form">
+                                    <input type="text" id="materialRegisterFormstate" class="form-control" formControlName="state_id"  aria-describedby="materialRegisterFormPhoneHelpBlock"
+                                           mdbInputDirective data-error="Please enter state" data-success=" ">
+                                    <label for="materialRegisterFormPhone">State</label>
+                                </div>
+
+                                <div class="md-form">
+                                    <input type="text" id="materialRegisterFormcountry" class="form-control" formControlName="country"  aria-describedby="materialRegisterFormPhoneHelpBlock"
+                                           mdbInputDirective data-error="Please enter country" data-success=" ">
+                                    <label for="materialRegisterFormPhone">Country</label>
+                                </div>
+
+                                <!-- Sign in button -->
+                                <button mdbBtn color="info" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
+                                        type="submit">Update</button>
+                                <!--<button class="btn btn-facebook" type="submit">Sign in</button>-->
+
+                            </form>
+                            <!-- Form -->
+                        </mdb-card-body>
+                    </mdb-card>
+
+
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+    </div>
+
+
+
+</section>
+<!--Section: Features v.2-->
+    </div></main>

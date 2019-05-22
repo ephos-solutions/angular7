@@ -1,0 +1,56 @@
+<mdb-card>
+
+    <!--Card content-->
+    <mdb-card-body class="px-lg-5 pt-0">
+
+        <!-- Form -->
+        <form *ngIf="form" [formGroup]="form" style="color: #757575;" (submit)="onSubmit($event)">
+            <div class="card" style="margin:50px 0">
+                <!-- Default panel contents -->
+                <div class="alert alert-success" role="alert" *ngIf="successMes">
+                    {{successMes}}
+                </div>
+                <div class="card-header font-weight-bold">My Notifications <i class="fa fa-bell"></i></div>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        Warranty Expiration Alerts
+                        <label class="float-right md-form">
+                            <select class="form-control" formControlName="warrExpAltertsId" (change)="onChange($event)"   mdbInputDirective data-error="Please select one option" data-success=" ">
+                                <option *ngFor="let key of objectKeys(warrExpAltertsList)" [value]="key">{{ warrExpAltertsList[key] }}</option>
+                            </select>
+                            <input type="hidden" formControlName="warrExpAlterts">
+                        </label>
+                    </li>
+                    <li class="list-group-item">
+                        Rebate Alerts
+                        <label class="switchToggle float-right">
+                            <input type="checkbox" id="rebateAlerts" formControlName="rebateAlerts" mdbInputDirective data-success=" " data-error=" ">
+                            <label for="rebateAlerts">Toggle</label>
+                        </label>
+                    </li>
+                    <li class="list-group-item">
+                        Critical products alerts
+                        <label class="switchToggle float-right">
+                            <input type="checkbox" id="importantProductAlerts" formControlName="importantProductAlerts" mdbInputDirective data-success=" " data-error=" ">
+                            <label for="importantProductAlerts">Toggle</label>
+                        </label>
+                    </li>
+                    <li class="list-group-item">
+                        Deal Alerts
+                        <label class="switchToggle float-right">
+                            <input type="checkbox" id="productDealAlerts" formControlName="productDealAlerts" mdbInputDirective data-success=" " data-error=" ">
+                            <label for="productDealAlerts">Toggle</label>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Sign in button -->
+            <button class="btn btn-facebook float-right" type="submit">UPDATE <i class="fa fa-edit"></i></button>
+            <!--<button class="btn btn-facebook" type="submit">Sign in</button>-->
+
+        </form>
+        <!-- Form -->
+    </mdb-card-body>
+</mdb-card>

@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+.modal-header {
+
+  border-bottom: none !important;
+  align-self: center !important;
+}
+.modal-footer {
+
+  border-top: none !important;
+}
+.modal-body{
+  border-top: 1px solid #e9ecef !important;
+}
+
+.modal-title {
+  font-weight: bold !important;
+}

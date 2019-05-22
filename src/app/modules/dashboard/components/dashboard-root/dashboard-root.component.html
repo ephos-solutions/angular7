@@ -1,0 +1,33 @@
+<app-header></app-header>
+<main>
+    <div class="container pt-5">
+        <!--Section: Main info-->
+        <section class="mt-5 wow fadeIn">
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link  active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fa fa-user-circle"></i> Profile</a>
+            <a class="nav-item nav-link" id="nav-privacy-tab" data-toggle="tab" href="#nav-privacy" role="tab" aria-controls="nav-privacy" aria-selected="false"><i class="fa fa-user-secret"></i> Privacy</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fa fa-cog"></i> Alert Preferences</a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><i class="fa fa-bell"></i> Notifications</a>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <app-profile></app-profile>
+        </div>
+        <div class="tab-pane fade" id="nav-privacy" role="tabpanel" aria-labelledby="nav-privacy-tab">
+            <app-privacy></app-privacy>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <app-preferences></app-preferences>
+        </div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+            <app-notification></app-notification>
+        </div>
+    </div>
+
+
+
+</section>
+<!--Section: Features v.2-->
+    </div></main>
